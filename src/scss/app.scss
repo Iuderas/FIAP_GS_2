@@ -1,0 +1,52 @@
+@use "variables";
+
+.section4 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    border: 2px solid variables.$color-text;
+    border-radius: 5px;
+    padding: 3rem;
+    margin: 3rem;
+
+    .dados {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      .user,
+      .senha {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          font-size: 1.4rem;
+          width: 100%;
+        }
+      }
+
+      .login {
+        display: flex;
+        justify-content: right;
+
+        button {
+          padding: 12px 28px;
+          font-size: 1.2rem;
+          background-color: variables.$color-subtitle;
+          color: #fff;
+          border: none;
+          border-radius: 3px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.45);
+          transition: 0.3s;
+        }
+
+        button:hover {
+          background-color: variables.$color-title;
+        }
+      }
+    }
+  }
+}
