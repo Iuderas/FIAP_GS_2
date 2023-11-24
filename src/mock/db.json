@@ -2,10 +2,9 @@
   "profiles": [
     {
       "id": 1,
-      "user": "admin",
-      "password": "admin",
-      "email": "admin@hotmail.com"
+      "user": "javascript",
+      "password": "js",
+      "email": "javascript@hotmail.com"
     }
   ]
 }
-
