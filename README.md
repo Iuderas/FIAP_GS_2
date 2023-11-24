@@ -11,8 +11,9 @@
 - Clone este repositório: `git clone https://github.com/Iuderas/FIAP_GS_2`
 - Instale as dependências: `npm install`
 - Inicie o servidor de desenvolvimento: `npm start`
-- Acesse o aplicativo no navegador: http://localhost:3000
-- <b>Para fazer login, é necessário usar as credenciais "admin" no campo login e senha e pressionar o botão "Login".</b>
+- Veja suas alterações no navegador: http://localhost:3000
+
+<h2>Credenciais :lock:</h2>
 
 <h2>Participantes :shipit:</h2>
 
