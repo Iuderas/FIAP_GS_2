@@ -7,6 +7,7 @@ import data from "../../mock/db.json";
 export const AppLogin = () => {
   const [userLogin, setUserLogin] = useState("");
   const [userPass, setUserPass] = useState("");
+  const [incorrectPass, setIncorrectPass] = useState(false);
 
   const navigate = useNavigate();
 
@@ -18,7 +19,9 @@ export const AppLogin = () => {
       userPass === data.profiles[0].password
     ) {
       navigate("/pages");
+      return;
     }
+    setIncorrectPass(true);
   };
 
   return (
@@ -48,6 +51,10 @@ export const AppLogin = () => {
           <div className="login">
             <button type="submit">Login</button>
           </div>
+
+          {incorrectPass && (
+            <h4 style={{ color: "#ff0066" }}>Usuário ou senha incorretos</h4>
+          )}
         </div>
       </form>
     </section>
