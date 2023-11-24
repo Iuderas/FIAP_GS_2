@@ -1,0 +1,93 @@
+@use "variables";
+
+header {
+  background: variables.$color-subtitle;
+  color: #fff;
+  padding: 10px 20px;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo h1 {
+      color: variables.$background-color;
+      font-size: 2rem;
+    }
+
+    .menu-lista {
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-menu-icon {
+      display: none;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        .bar {
+          background: #fff;
+          height: 3px;
+          width: 25px;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .open {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .menu .menu-lista {
+      display: none;
+    }
+
+    .menu .mobile-menu-icon {
+      display: block;
+    }
+
+    .menu .mobile-menu {
+      display: block;
+    }
+  }
+}
