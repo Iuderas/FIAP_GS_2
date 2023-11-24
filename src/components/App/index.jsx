@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../../scss/app.scss";
+import { useNavigate } from "react-router-dom";
 
 import data from "../../mock/db.json";
 
@@ -7,9 +8,22 @@ export const AppLogin = () => {
   const [userLogin, setUserLogin] = useState("");
   const [userPass, setUserPass] = useState("");
 
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      userLogin === data.profiles[0].user &&
+      userPass === data.profiles[0].password
+    ) {
+      navigate("/pages");
+    }
+  };
+
   return (
     <section className="section4">
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="dados">
           <div className="user">
             <label for="user">Usuário</label>
@@ -32,18 +46,7 @@ export const AppLogin = () => {
             />
           </div>
           <div className="login">
-            <button>
-              <a
-                href={
-                  userLogin === data.profiles[0].user &&
-                  userPass === data.profiles[0].password
-                    ? "/pages"
-                    : "#"
-                }
-              >
-                Login
-              </a>
-            </button>
+            <button type="submit">Login</button>
           </div>
         </div>
       </form>
