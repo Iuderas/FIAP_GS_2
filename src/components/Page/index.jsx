@@ -9,7 +9,11 @@ export const Page = () => {
       <main>
         <div className="grid" id="home">
           <section className="section1">
-            <img className="main-img" src="../images/main-img.jpg" />
+            <img
+              className="main-img"
+              src="../images/main-img.jpg"
+              alt="medico"
+            />
             <div className="introduction">
               <h1>CareBot</h1>
               <p>
