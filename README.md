@@ -14,6 +14,10 @@
 - Veja suas alterações no navegador: http://localhost:3000
 
 <h2>Credenciais :lock:</h2>
+As credenciais são necessárias para autenticação no projeto, sem elas não será possível acessar o conteúdo.
+
+- Usuário: javascript
+- Senha: js
 
 <h2>Participantes :shipit:</h2>
 
